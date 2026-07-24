@@ -1,0 +1,259 @@
+{
+  "resourceIdToPointerMappings": {
+    "knoxx-sandbox-space": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "space",
+      "id": "9607e18f-5d82-4842-8b96-ca0d32e66011"
+    },
+    "knowledge-ds": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "collection",
+      "id": "3a791b07-11ac-81d8-abf3-000b48207c9b"
+    },
+    "know-konjac-ramp": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a791b07-11ac-8136-ad63-d470e746862d"
+    },
+    "knowledge-ip-view": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "collection_view",
+      "id": "3a791b07-11ac-8174-a1f9-000cfd43b2df"
+    },
+    "governance-page": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a791b07-11ac-814d-8e33-e984f07b1acc"
+    },
+    "projects-ds": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "collection",
+      "id": "3a791b07-11ac-818c-b5f3-000b3d3a972b"
+    },
+    "activities-ato-view": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "collection_view",
+      "id": "3a791b07-11ac-816d-ad00-000c3e4dd470"
+    },
+    "ki-rnd-teamspace": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "team",
+      "id": "3a791b07-11ac-8150-b3c5-0042bac9f265"
+    },
+    "activities-log-view": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "collection_view",
+      "id": "3a791b07-11ac-8186-af9a-000c23d0a4d5"
+    },
+    "activities-calendar-view": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "collection_view",
+      "id": "3a791b07-11ac-8180-addc-000c8f7d6a49"
+    },
+    "knowledge-by-category-view": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "collection_view",
+      "id": "3a791b07-11ac-817d-ab8e-000c82c02a1d"
+    },
+    "knowledge-all-view": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "collection_view",
+      "id": "3a791b07-11ac-81e3-995a-000c685288b9"
+    },
+    "act-prawn-trial1": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a791b07-11ac-8190-a921-c4616198fac2"
+    },
+    "knowledge-db": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a791b07-11ac-8168-9aad-efd6f19d4e62"
+    },
+    "activities-by-type-view": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "collection_view",
+      "id": "3a791b07-11ac-81a5-a5c3-000cf1553b76"
+    },
+    "proj-curry": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a791b07-11ac-8164-a630-ed6be2e8c03b"
+    },
+    "act-prawn-trial2": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a791b07-11ac-81a2-8519-e19f8748d318"
+    },
+    "act-curry-bench1": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a791b07-11ac-81b6-9046-c6b061935520"
+    },
+    "commercial-pipeline-view": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "collection_view",
+      "id": "3a791b07-11ac-8103-aafc-000c2abe8cfc"
+    },
+    "rnd-hub-page": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a791b07-11ac-8170-89bd-e6b19d97c3f2"
+    },
+    "projects-timeline-view": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "collection_view",
+      "id": "3a791b07-11ac-81b8-95b1-000cf0c0ce62"
+    },
+    "act-prawn-cocreation": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a791b07-11ac-8126-8564-e47a505fd98c"
+    },
+    "activities-db": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a791b07-11ac-8197-9aac-fe4ac87b5fe0"
+    },
+    "know-salt-ceiling": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a791b07-11ac-818f-b7bd-e6f243a9605f"
+    },
+    "projects-board-view": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "collection_view",
+      "id": "3a791b07-11ac-8122-8b99-000ca341cb5e"
+    },
+    "evidence-page": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a791b07-11ac-8118-b7dd-c1a3b9ccf5a7"
+    },
+    "act-prawn-kickoff": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a791b07-11ac-811f-af1f-d66a7638a1de"
+    },
+    "ownership-page": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a791b07-11ac-8119-97e6-eb4fabda627f"
+    },
+    "projects-hub-embed": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "collection_view",
+      "id": "3a791b07-11ac-814f-8118-000c9501d447"
+    },
+    "commercial-ds": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "collection",
+      "id": "3a791b07-11ac-81c5-a4e9-000b8dee04eb"
+    },
+    "activities-ds": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "collection",
+      "id": "3a791b07-11ac-813c-ab3b-000b42b61583"
+    },
+    "opp-plantpro": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a791b07-11ac-811e-b90d-d2f2ebdbbae5"
+    },
+    "act-curry-lit-review": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a791b07-11ac-8193-b3b1-c9d0dd0fd92b"
+    },
+    "activities-by-person-view": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "collection_view",
+      "id": "3a791b07-11ac-81f1-9a14-000cd17036d8"
+    },
+    "activities-hub-embed": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "collection_view",
+      "id": "3a791b07-11ac-81be-8bec-000c456953ca"
+    },
+    "projects-db": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a791b07-11ac-81b0-b247-f382d63b1587"
+    },
+    "projects-open-view": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "collection_view",
+      "id": "3a791b07-11ac-812d-adc1-000c30024040"
+    },
+    "commercial-db": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a791b07-11ac-817d-bb55-ede57c52f388"
+    },
+    "projects-all-view": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "collection_view",
+      "id": "3a791b07-11ac-81da-8a18-000cc500e408"
+    },
+    "proj-prawn": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a791b07-11ac-81c4-8ef7-c3a80da33875"
+    },
+    "opp-currybase": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a791b07-11ac-8114-b9ca-e1099db1feda"
+    }
+  },
+  "resourceIdToPropertyIdMappings": {
+    "act-project-rel": "WSYr",
+    "comm-status": "PsRM",
+    "proj-id": "`Eji",
+    "proj-priority": "ix{u",
+    "proj-total-hours": "_Aso",
+    "act-core": "e\\l;",
+    "act-location": "|hNf",
+    "act-evidence": "pN]p",
+    "proj-status": "WQt@",
+    "act-eligible-hours": "aoZg",
+    "act-challenge": "gczP",
+    "act-next-action": "yz>T",
+    "know-project-rel": "kgvU",
+    "act-id": "zXhN",
+    "act-grant-eligible": "<tF>",
+    "comm-id": "V;X@",
+    "proj-activity-count": "Ue[P",
+    "act-hours": "UPvp",
+    "know-date": ">xi?",
+    "know-evidence": "@nFK",
+    "proj-knowledge-rel": "yFo]",
+    "act-supporting": "}u>I",
+    "act-person": "g\\{j",
+    "know-id": "Rw_x",
+    "comm-name": "title",
+    "proj-name": "title",
+    "proj-closed": "TDJW",
+    "act-outcome": "~`jZ",
+    "proj-stage": "F;FP",
+    "act-type": "i|ro",
+    "know-activity-rel": "]wY`",
+    "act-stage": ">tQC",
+    "comm-projects-rel": "\\ymE",
+    "proj-owner": "bA;k",
+    "know-captured-by": "spuY",
+    "proj-start-date": "_cfc",
+    "proj-due-date": "X[[U",
+    "proj-commercial-ready": "jIhd",
+    "proj-activities-rel": "Wrv|",
+    "act-title": "title",
+    "know-ip-relevant": "JvdS",
+    "know-category": "nkH\\",
+    "proj-grant-hours": "?oD>",
+    "know-title": "title",
+    "proj-commercial-rel": "zxce",
+    "know-lesson": "JDO=",
+    "comm-customer": "mKfV",
+    "act-date": "zT}A"
+  }
+}
