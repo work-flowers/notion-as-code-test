@@ -1,0 +1,206 @@
+
+======================================================================
+DS: Meeting Notes  (19891b07-11ac-8137-9d62-000b75fab86e)  desc=This database is synced from @Anonymous‘s calendar via this Zap. It links external attendees through a relation to the Untitled database.
+
+Upon completion of a meeting, you can trigger a workflow to r
+  - 'Google Drive Files': relation -> Google Drive Files type=dual_property syn=Related to Meeting Notes (Google Drive File)
+  - 'Project': relation -> Projects type=dual_property syn=Meeting Notes
+  - 'Tasks': relation -> Tasks type=dual_property syn=Meeting Notes
+  - 'Status': formula expr=if(dateEnd({{notion:block_property:bg%7Dv:19891b07-11ac-8137-9d62-000b75fab86e:9607e18f-5d82-4842-8b96-ca0d32e66011}}) > now(), "Upcoming", "Completed")
+  - 'Created by': select [1] [('dennis@work.flowers', 'red')]
+  - 'Summary': rich_text
+  - 'Internal Attendees': people
+  - 'Comment Access': people
+  - 'Date': date
+  - 'Granola Link': url
+  - 'Deals': relation -> Deals type=dual_property syn=Meeting Notes
+  - 'Google Calendar Event ID': rich_text
+  - 'Attendees': multi_select [264] [('121d872b-594c-810b-ba5a-000206eeef1e', 'orange'), ('absamat.n@choco.kz', 'orange'), ('academyeliteathlete@gmail.com', 'gray'), ('adam_sanusi@imda.gov.sg', 'brown'), ('aditya@sundial.so', 'gray'), ('admin@sheraleeping.com.au', 'gray'), ('adnnann.khalil@gmail.com', 'orange'), ('adrian@elmnto.com', 'default'), ('agent@work.flowers', 'blue'), ('aimee@work.flowers', 'blue'), ('aimeehchiuten@gmail.com', 'default'), ('akm@salesmagnitude.com', 'blue'), ('alex@automatemy.co', 'blue'), ('alex@example.com', 'orange'), ('alexander@gb-advisors.com', 'brown'), ('alextoh@magellanlawllp.com', 'pink'), ('ali.rizvi@uwaterloo.ca', 'blue'), ('alina.vetter@zapier.com', 'purple'), ('alko@ordinaryfolk.health', 'green'), ('amalinaca@gmail.com', 'pink'), ('amrita.delapena@gmail.com', 'pink'), ('amrita@3cricket.com', 'green'), ('ananya.rajagopalan@clare.ai', 'orange'), ('anazaret@nba.com', 'purple'), ('andreatsm39@gmail.com', 'gray'), ('andres@connex.digital', 'yellow'), ('ani@elitefit.ai', 'default'), ('anjali@knoxxfoods.com', 'yellow'), ('anuj@zoilabs.com', 'brown'), ('anupama.shenoy@gmail.com', 'brown')] ...TRUNC
+  - 'Created time': created_time
+  - 'Type': select [16] [('1:1', 'purple'), ('Client', 'green'), ('Coffee', 'brown'), ('Community', 'pink'), ('Event', 'default'), ('Legal', 'gray'), ('Notion Setup Session', 'brown'), ('Onboarding', 'purple'), ('Partner', 'red'), ('Product Demo', 'pink'), ('Project', 'gray'), ('Prospect', 'orange'), ('Team', 'yellow'), ('Training', 'default'), ('Vendor', 'yellow'), ('Zapier Solution Partners', 'blue')]
+  - 'Company Names': rollup rel=Companies target=Company Name fn=show_unique
+  - 'Contacts': relation -> Contacts type=dual_property syn=Meeting Notes
+  - 'Description': rich_text
+  - 'Companies': relation -> Companies type=dual_property syn=Meeting Notes
+  - 'Call Link': url
+  - 'Related Docs': relation -> ? type=dual_property syn=Related Meetings
+  - 'Add Meeting Context': checkbox
+  - 'Title': title
+
+======================================================================
+DS: Emails  (1e491b07-11ac-80ce-8b86-000b29ba4f68)  desc=
+  - 'Gmail Message ID': rich_text
+  - 'Thread Summary': rich_text
+  - 'Companies': relation -> Companies type=dual_property syn=Emails
+  - 'Gmail Thread ID': rich_text
+  - 'Deals': relation -> Deals type=dual_property syn=Emails
+  - 'Comment Access': people
+  - 'Internal Recipients': people
+  - 'From': email
+  - 'Projects': relation -> Projects type=dual_property syn=Emails
+  - 'Last edited': last_edited_time
+  - 'URL': url
+  - 'Cc': multi_select [162] [('academyeliteathlete@gmail.com', 'red'), ('agent@work.flowers', 'green'), ('amitesh@knoxxfoods.com', 'default'), ('andres@connex.digital', 'default'), ('anjali@knoxxfoods.com', 'default'), ('ap.us@makenotion.com', 'red'), ('aps@knoxxfoods.com', 'default'), ('ben@getcandidly.com', 'purple'), ('biancaminting.woon@wework.com', 'green'), ('billing@work.flowers', 'brown'), ('brenda@work.flowers', 'purple'), ('business.operations@securecodewarrior.com', 'red'), ('charlotte.nacca@vanta.com', 'default'), ('chenyang@goldengate.vc', 'gray'), ('chirag@talkyourheartout.com', 'purple'), ('christal@goldengate.vc', 'default'), ('clare@jiffy.sg', 'orange'), ('conference@goldengate.vc', 'purple'), ('crm@work.flowers', 'orange'), ('cs-admin_group@sakana.ai', 'purple'), ('cyeoh@securecodewarrior.com', 'pink'), ('daniel.kyriakoulis@vanta.com', 'orange'), ('Data_Protection_Essentials@imda.gov.sg', 'blue'), ('dave.menceles@makenotion.com', 'blue'), ('Dennis Chiuten <dennis@work.flowers>', 'yellow'), ('dennis@work.flowers', 'yellow'), ('desmond@goldengate.vc', 'yellow'), ('dphung@securecodewarrior.com', 'orange'), ('emma.ogiso@vanta.com', 'orange'), ('ernest@work.flowers', 'green')] ...TRUNC
+  - 'Attachments': files
+  - 'To': multi_select [376] [('dennis@work.flowers', 'yellow'), ('dot@botmd.io', 'default'), ('jacob.flores@vanta.com', 'gray'), ('obaron@makenotion.com', 'blue'), ('ollie@pvm.global', 'brown'), ('seen.tarawhiti@vanta.com', 'green'), ('raushidavasaiwala@gmail.com', 'brown'), ('chirag@talkyourheartout.com', 'blue'), ('clare@jiffy.sg', 'purple'), ('skylar@jiffy.sg', 'orange'), ('billing@work.flowers', 'red'), ('sean@ordinaryfolk.health', 'pink'), ('academyeliteathlete@gmail.com', 'gray'), ('jewkoh@linkedin.com', 'orange'), ('zea@work.flowers', 'gray'), ('agent@work.flowers', 'default'), ('pearlyn_loh@singlifefa.com', 'default'), ('marylen@ctsolutionsglobal.com', 'default'), ('vinay@oddinary.co.in', 'green'), ('i1a4l5d7s9x1b1p5@workflowers-workspace.slack.com', 'default'), ('info@creddy.me', 'yellow'), ('dchiuten@work.flowers', 'gray'), ('reddit@work.flowers', 'red'), ('care@clay.earth', 'gray'), ('hello@work.flowers', 'purple'), ('pavan.work.contact@gmail.com', 'pink'), ('hellohanguyen@gmail.com', 'red'), ('mayaglow@gmail.com', 'pink'), ('kokhow@aorabms.com', 'purple'), ('s.usmanaziz@gmail.com', 'default')] ...TRUNC
+  - 'Created time': created_time
+  - 'Date Received': date
+  - 'Contacts': relation -> Contacts type=dual_property syn=📥 Emails
+  - 'Subject': title
+
+======================================================================
+DS: Companies  (21991b07-11ac-80b0-b787-000b3d3995f6)  desc=
+  - 'Register Lead': button
+  - 'Last Contacted': rollup rel=Contacts target=Last Contacted fn=count
+  - 'Created time': created_time
+  - 'Readwise Highlights': relation -> ? type=dual_property syn=Companies
+  - 'Country': select [8] [('AE', 'gray'), ('AU', 'gray'), ('GB', 'green'), ('ID', 'gray'), ('JP', 'brown'), ('NL', 'blue'), ('SG', 'green'), ('US', 'red')]
+  - 'Time Entries': relation -> ? type=dual_property syn=Company
+  - 'No. Deals': rollup rel=Deals target=Deal Name fn=count
+  - 'Primary Billing Contact': relation -> Contacts type=single_property syn=None
+  - 'No. Contacts': rollup rel=Contacts target=Name fn=count_values
+  - 'Zapier Client Id': rich_text
+  - 'Account Owner Email Override': email
+  - 'Contacts': relation -> Contacts type=dual_property syn=Related Company
+  - 'Deal Owner': rollup rel=Deals target=Owner fn=show_unique
+  - 'Last edited time': last_edited_time
+  - 'Account Owner Email': rollup rel=Zapier Account Owner target=Primary Email fn=show_original
+  - 'ID': unique_id prefix=COM
+  - 'Google Drive Folder ID': rich_text
+  - 'Zapier Lead Status': select [4] [('Accepted', 'gray'), ('Rejected', 'blue'), ('Submitted', 'pink'), ('Approved', 'purple')]
+  - 'Size': select [4] [('1-49', 'brown'), ('50-249', 'purple'), ('250-999', 'gray'), ('1000+', 'blue')]
+  - 'Meeting Notes': relation -> Meeting Notes type=dual_property syn=Companies
+  - 'Harvest Client ID': rich_text
+  - 'Account Owner First Name': rollup rel=Zapier Account Owner target=First Name fn=show_original
+  - 'Xero Contact ID': rich_text
+  - 'Referral Lead Id': rich_text
+  - '🔖 Memories': relation -> ? type=dual_property syn=Companies
+  - '💼 Docs': relation -> ? type=dual_property syn=Related Companies
+  - 'Linear Customer ID': rich_text
+  - 'Create Xero Contact': button
+  - 'Industry': select [15] [('Automation Agency', 'green'), ('E-commerce', 'pink'), ('Education', 'yellow'), ('Energy', 'red'), ('Finance', 'purple'), ('Healthcare', 'green'), ('Manufacturing', 'brown'), ('Marketing Agency', 'gray'), ('Media & Entertainment', 'pink'), ('Nonprofit', 'brown'), ('Retail', 'orange'), ('Sports and Fitness Education', 'default'), ('Sports Training and Education', 'orange'), ('Technology', 'blue'), ('Transportation', 'gray')]
+  - 'Emails': relation -> Emails type=dual_property syn=Companies
+  - 'Slack Channel ID': rich_text
+  - 'Account Owner Last Name': rollup rel=Zapier Account Owner target=Last Name fn=show_original
+  - 'Address': place
+  - 'Deals': relation -> Deals type=dual_property syn=Company
+  - 'Linear Team ID': rich_text
+  - 'Project Proposals': relation -> ? type=dual_property syn=Companies
+  - 'Slack Channel': formula expr="https://workflowers-workspace.slack.com/archives/" + {{notion:block_property:aXqC:21991b07-11ac-80b0-b787-000b3d3995f6:9607e18f-5d82-4842-8b96-ca0d32e66011}}
+  - 'Projects': relation -> Projects type=dual_property syn=Companies
+  - 'Website': url
+  - 'Description': rich_text
+  - 'Invoices': relation -> ? type=dual_property syn=Company
+  - 'Google Drive Folder': formula expr="https://drive.google.com/drive/folders/" + {{notion:block_property:P%7D%3AU:21991b07-11ac-80b0-b787-000b3d3995f6:9607e18f-5d82-4842-8b96-ca0d32e66011}}
+  - '🧾 Project Addendums': relation -> ? type=dual_property syn=Client
+  - 'Legal Agreements': relation -> ? type=dual_property syn=Companies
+  - 'Zapier Account Owner': relation -> Contacts type=single_property syn=None
+  - 'Company Name': title
+
+======================================================================
+DS: Contacts  (21991b07-11ac-81a6-a894-000be4a09a67)  desc=Contacts, Companies, and Deals
+  - 'Owner': people
+  - 'Primary Email': email
+  - 'Location': rich_text
+  - 'Meeting Notes': relation -> Meeting Notes type=dual_property syn=Contacts
+  - 'Last Name': rich_text
+  - 'City': select [383] [('Sao Paulo', 'green'), ('Singapore', 'red'), ('San Francisco', 'default'), ('Minneapolis', 'pink'), ('Los Angeles', 'gray'), ('Mountain View', 'brown'), ('Chapel Hill', 'purple'), ('Cartagena', 'yellow'), ('Tokyo', 'orange'), ('New York', 'blue'), ('India', 'blue'), ('Milford', 'yellow'), ('Seattle', 'default'), ('Frankfurt', 'default'), ('New South Wales', 'yellow'), ('Melbourne', 'gray'), ('Karnataka', 'red'), ('Pipersville', 'blue'), ('Tulsa', 'yellow'), ('Gurgaon', 'blue'), ('Greater New York City Area', 'default'), ('Delhi', 'orange'), ('London', 'brown'), ('Redwood City', 'brown'), ('Amherst', 'default'), ('San Diego', 'blue'), ('Jaipur', 'red'), ('Boston', 'yellow'), ('Charleston', 'blue'), ('Tucson', 'orange')] ...TRUNC
+  - 'Domain': rollup rel=Related Company target=Website fn=show_original
+  - 'Last Contacted': formula expr=lets(
+  /* Get the most recent meeting date from related meetings */
+  latestMeetingDate, {{notion:block_property:DvlI:21991b07-11ac-81a6-a894-000be4a09a67:9607e18f-5d82-4842-8b96-ca0d32e66011}}
+    .map(current.{{notion:block_property:bg%7Dv:19891b07-11ac-8137-9d62-000b75fab86e:9607e18f-5d82-4842-8b96-ca0d32e66011}})
+    .filter(not empty(current))
+    .sort()
+    .last(),
+  /* Get the most recent email date from related emails */
+  latestEmailDate, {{notion:block_property:SPJG:21991b07-11ac-81
+  - 'Event attendees': relation -> ? type=dual_property syn=Contact
+  - 'Created time': created_time
+  - '📥 Emails': relation -> Emails type=dual_property syn=Contacts
+  - 'Enrich': button
+  - 'Latest Meeting': formula expr=lets(
+  /* Get the most recent meeting date */
+  latestMeetingDate, {{notion:block_property:DvlI:21991b07-11ac-81a6-a894-000be4a09a67:9607e18f-5d82-4842-8b96-ca0d32e66011}}
+    .filter(not empty(current.{{notion:block_property:bg%7Dv:19891b07-11ac-8137-9d62-000b75fab86e:9607e18f-5d82-4842-8b96-ca0d32e66011}}) and current.{{notion:block_property:bg%7Dv:19891b07-11ac-8137-9d62-000b75fab86e:9607e18f-5d82-4842-8b96-ca0d32e66011}} <= now())
+    .map(current.{{notion:block_property:bg%7Dv:19891b07-11a
+  - 'Linkedin': url
+  - 'Unsubscribed on': date
+  - 'Deals Referred': relation -> Deals type=dual_property syn=Referred by
+  - 'Company': rollup rel=Related Company target=Company Name fn=show_original
+  - 'Comment Access': people
+  - 'Job Title': rich_text
+  - 'Country': select [64] [('Argentina', 'blue'), ('Australia', 'yellow'), ('Austria', 'orange'), ('Belgium', 'red'), ('Brazil', 'blue'), ('Canada', 'purple'), ('China', 'gray'), ('Colombia', 'default'), ('Cyprus', 'orange'), ('Denmark', 'gray'), ('France', 'orange'), ('Georgia', 'red'), ('Germany', 'orange'), ('Greece', 'green'), ('Hong Kong', 'purple'), ('Hungary', 'blue'), ('India', 'pink'), ('Indonesia', 'purple'), ('Ireland', 'purple'), ('Israel', 'purple'), ('Italy', 'blue'), ('Jamaica', 'yellow'), ('Japan', 'brown'), ('Kenya', 'orange'), ('South Korea', 'orange'), ('Luxembourg', 'purple'), ('Malaysia', 'orange'), ('Mexico', 'green'), ('Monaco', 'yellow'), ('Morocco', 'yellow')] ...TRUNC
+  - 'Deals': relation -> Deals type=dual_property syn=Contact
+  - 'Last Enriched': date
+  - 'Add to Mailing List': button
+  - 'First Contacted': date
+  - 'Memories': relation -> ? type=dual_property syn=Contacts
+  - 'Customer Reviews': relation -> ? type=dual_property syn=Contact
+  - 'Related Company': relation -> Companies type=dual_property syn=Contacts
+  - 'Primary Phone': phone_number
+  - 'Latest Email': formula expr=if(empty({{notion:block_property:SPJG:21991b07-11ac-81a6-a894-000be4a09a67:9607e18f-5d82-4842-8b96-ca0d32e66011}}),
+  empty(),
+  /* Get all email dates, sort them, and take the most recent */
+  formatDate(
+    {{notion:block_property:SPJG:21991b07-11ac-81a6-a894-000be4a09a67:9607e18f-5d82-4842-8b96-ca0d32e66011}}
+      .map(current.{{notion:block_property:wRuw:1e491b07-11ac-80ce-8b86-000b29ba4f68:9607e18f-5d82-4842-8b96-ca0d32e66011}})
+      .sort()
+      .last(),
+    "YYYY/MM/DD"
+  )
+)
+  - 'Lead Source': select [9] [('Contact Us', 'pink'), ('Event', 'red'), ('Existing Network', 'purple'), ('LinkedIn', 'blue'), ('Newsletter Sign-up', 'yellow'), ('Notion Partner Directory', 'default'), ('Notion Setup Session', 'green'), ('Vendor', 'gray'), ('Zapier Partner Directory', 'brown')]
+  - 'Secondary Email': multi_select [168] [('adnnann.khalil@gmail.com', 'default'), ('aknox@twitter.com', 'default'), ('alasdair.bell@gmail.com', 'yellow'), ('altheadelrosario@slingstone.com', 'brown'), ('amrita@3cricket.com', 'purple'), ('anazaret@nba.com', 'default'), ('andrea@january.capital', 'brown'), ('berthe.noujaim@gmail.com', 'brown'), ('bliastan@gmail.com', 'gray'), ('byun@twitter.com', 'gray'), ('catchAllDomain: False\ndeliverable: True\nemail: yiannis.koutsomitis@sympower.net\nfree: False\nqualityScore: 90\nstatus: valid\nvalidEmailServer: True', 'pink'), ('chenwenlongofficial@gmail.com', 'brown'), ('christopher.powell@barclayscapital.com', 'red'), ('coaching@iamethanteo.com', 'red'), ('david@corbindb.com', 'pink'), ('dchiuten@gmail.com', 'yellow'), ('ddo@twitter.com', 'pink'), ('enrico@naonis.tech', 'pink'), ('ericvuong95@gmail.com', 'gray'), ('ernest@work.flowers', 'purple'), ('ethan_teo@awwa.org.sg', 'default'), ('etienne.schoettel@terrascope.com', 'gray'), ('ezra.goldberg@zapier.com', 'blue'), ('ezra@ordinaryfolk.health', 'default'), ('felipe.daguila@terrascope.com', 'pink'), ('gene.soo@mtr.com.hk', 'purple'), ('glenn.lim@brandsforgood.sg', 'pink'), ('glxzea@gmail.com', 'green'), ('grace@work.flowers', 'brown'), ('hello@startrighthealthcare.com', 'orange')] ...TRUNC
+  - 'First Name': rich_text
+  - 'Duplicated by': relation -> Contacts type=dual_property syn=Duplicate of
+  - 'Created by': created_by
+  - 'Note': rich_text
+  - 'Bio': rich_text
+  - 'Duplicate of': relation -> Contacts type=dual_property syn=Duplicated by
+  - '⚖️ Signed Legal Agreements': relation -> ? type=dual_property syn=Signatory
+  - 'Name': title
+  - 'Mailing List': checkbox
+  - 'Subscribed on': date
+
+======================================================================
+DS: Deals  (21a91b07-11ac-808d-9657-000b1390d20b)  desc=
+  - 'Contact': relation -> Contacts type=dual_property syn=Deals
+  - 'Deal ID': unique_id prefix=DEAL
+  - 'Company ID': rollup rel=Company target=ID fn=show_original
+  - 'Referred by': relation -> Contacts type=dual_property syn=Deals Referred
+  - 'Company Name': rollup rel=Company target=Company Name fn=show_original
+  - 'Expected Close': date
+  - 'Value (SGD)': formula expr=if(empty({{notion:block_property:UhXE:21a91b07-11ac-808d-9657-000b1390d20b:9607e18f-5d82-4842-8b96-ca0d32e66011}}), empty(), {{notion:block_property:f%3DoX:21a91b07-11ac-808d-9657-000b1390d20b:9607e18f-5d82-4842-8b96-ca0d32e66011}} * {{notion:block_property:UhXE:21a91b07-11ac-808d-9657-000b1390d20b:9607e18f-5d82-4842-8b96-ca0d32e66011}})
+  - 'Time Entries': relation -> ? type=dual_property syn=Deal
+  - 'SOWs': relation -> ? type=dual_property syn=Deal
+  - 'Projects': relation -> Projects type=dual_property syn=Deals
+  - 'Meeting Notes': relation -> Meeting Notes type=dual_property syn=Deals
+  - 'Google Drive Folder': rollup rel=Company target=Google Drive Folder fn=show_original
+  - 'Description': rich_text
+  - 'Owner': people
+  - 'Slack Channel': rollup rel=Company target=Slack Channel fn=show_original
+  - 'Last Contact': rollup rel=Contact target=Last Contacted fn=show_unique
+  - 'FX Rate to SGD': rollup rel=Deal Currency target=Rate to SGD fn=sum
+  - 'Probability': number fmt=percent
+  - 'Create Google Drive Folder': button
+  - 'Create Slack Channel': button
+  - 'Lost Reason': select [8] [('Price / Budget', 'red'), ('Chose competitor', 'orange'), ('Timing / Not now', 'yellow'), ('No budget', 'brown'), ('Went with internal build', 'blue'), ('Went silent / No response', 'gray'), ('Not a fit', 'purple'), ('Other', 'default')]
+  - 'Project Proposal': relation -> ? type=dual_property syn=Deals
+  - 'Domain': rollup rel=Company target=Website fn=show_original
+  - 'Emails': relation -> Emails type=dual_property syn=Deals
+  - 'Status': status [7] [('Lead', 'yellow'), ('Proposal', 'blue'), ('Negotiation', 'purple'), ('In signing', 'orange'), ('Closed Won', 'green'), ('Closed Lost', 'red'), ('Declined', 'pink')] GROUPS=[('To-do', 'default', ['Lead']), ('In progress', 'default', ['In signing', 'Proposal', 'Negotiation']), ('Complete', 'default', ['Closed Won', 'Closed Lost', 'Declined'])]
+  - 'Value': number fmt=number_with_commas
+  - '🔖 Memories': relation -> ? type=dual_property syn=Deals
+  - 'Type': select [5] [('Full Retainer', 'yellow'), ('Project', 'blue'), ('Support Retainer', 'pink'), ('Vanta Subscription', 'default'), ('Workshop', 'green')]
+  - 'Deal Currency': relation -> ? type=single_property syn=None
+  - 'FX Rate Date': rollup rel=Deal Currency target=Rate Date fn=show_unique
+  - 'Actual Close': date
+  - '⚖️ Signed Legal Agreements': relation -> ? type=dual_property syn=Deals
+  - 'Create Harvest Project': button
+  - 'Tasks': relation -> Tasks type=dual_property syn=Deals
+  - 'Expected Value': formula expr={{notion:block_property:WavB:21a91b07-11ac-808d-9657-000b1390d20b:9607e18f-5d82-4842-8b96-ca0d32e66011}} * {{notion:block_property:Bv%5DO:21a91b07-11ac-808d-9657-000b1390d20b:9607e18f-5d82-4842-8b96-ca0d32e66011}}
+  - 'Company': relation -> Companies type=dual_property syn=Deals
+  - 'Created time': created_time
+  - 'Contact Email': rollup rel=Contact target=Primary Email fn=show_original
+  - 'Deal Name': title

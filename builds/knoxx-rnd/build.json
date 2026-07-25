@@ -1,0 +1,15 @@
+{
+  "name": "knoxx-rnd",
+  "title": "Knoxx Innovations — R&D management & evidence system",
+  "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+  "spaceAnchorResourceId": "knoxx-sandbox-space",
+  "script": "build.ts",
+  "session": "session.json",
+  "tokenRef": "op://Employee/notion-as-code-test/credential",
+  "opAccount": "work-flowers",
+  "autoIncrementPrefixes": ["KIP", "KIA", "KIK", "KIC"],
+  "status": "deployed",
+  "deployedAt": "2026-07-24",
+  "teamspace": "KI R&D Sandbox",
+  "hubUrl": "https://app.notion.com/p/3a791b0711ac817089bde6b19d97c3f2"
+}

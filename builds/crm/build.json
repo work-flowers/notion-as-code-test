@@ -1,0 +1,19 @@
+{
+  "name": "crm",
+  "title": "work.flowers CRM \u2014 core objects, meetings, emails and views",
+  "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+  "spaceAnchorResourceId": "crm-sandbox-space",
+  "script": "build.ts",
+  "session": "session.json",
+  "tokenRef": "op://Employee/notion-as-code-test/credential",
+  "opAccount": "work-flowers",
+  "autoIncrementPrefixes": [
+    "CRMC",
+    "CRMD"
+  ],
+  "status": "deployed",
+  "deployedAt": "2026-07-25",
+  "teamspace": "CRM Sandbox",
+  "hubUrl": "https://app.notion.com/p/3a891b0711ac81008c08f898ab8f39cf",
+  "modelledFrom": "https://app.notion.com/p/work-flowers/CRM-21991b0711ac811dad9cf4a7103368f8"
+}
