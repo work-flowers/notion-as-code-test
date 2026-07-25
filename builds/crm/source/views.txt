@@ -1,0 +1,285 @@
+
+## [None] 'Contact Dashboard'  type=dashboard  db=31a91b07-11ac-801f-a4ab-ec043bc3172f
+   filter: None
+   other: {"rows": [{"id": "349b01d3-a0a4-4748-8a8a-5f27de95448b", "widgets": [{"id": "ba788402-f3a2-43df-9e4a-8bbd7abca95b", "view_id": "39291b07-11ac-800f-a713-000c45883087", "row_index": 0}]}, {"id": "58ebdd3e-9405-4300-ad6b-14e7832b740d", "widgets": [{"id": "d683667a-a697-4faa-8f54-7072ffca1e19", "view_id": "39291b07-11ac-8092-8320-000cac7d19e8", "row_index": 1}, {"id": "ae851eac-b687-422a-8198-011cb562ea3b", "view_id": "39291b07-11ac-80b4-93e4-000c3a9e0cb3", "row_index": 1}]}]}
+
+## [Companies] 'Companies'  type=table  db=31a91b07-11ac-801f-a4ab-ec043bc3172f
+   filter: None
+   sorts: [('title', 'ascending')]
+   wrap_cells: False
+   visible: ['Company Name', 'Address', 'Contacts', 'Country', 'Create Xero Contact', 'Created time', 'Deals', 'Description', 'Emails', 'Google Drive Folder', 'ID', 'Industry', 'Last Contacted', 'Last edited time', 'Legal Agreements', 'Library', 'Meeting Notes', 'No. Contacts', 'No. Deals', 'Primary Billing Contact', 'Project Proposals', 'Readwise Highlights', None, 'Size', 'Website', '💼 Docs', '🧾 Project Addendums', 'Harvest Client ID']
+   other: {"subtasks": {"filter_scope": "parents_and_subitems"}, "frozen_column_index": -1}
+
+## [Companies] 'Full Gallery'  type=gallery  db=21a91b07-11ac-8049-a173-cff7e04e01ea
+   filter: None
+   sorts: [('title', 'ascending')]
+   visible: [None, None, None]
+   other: {"cover_size": "medium"}
+
+## [Companies] 'With Deals'  type=gallery  db=21a91b07-11ac-8049-a173-cff7e04e01ea
+   filter: None
+   sorts: [('title', 'ascending')]
+   visible: [None, None, None, None, None, None]
+
+## [Contacts] 'Calendar view'  type=calendar  db=21991b07-11ac-81fb-ad7b-f7a793145f1f
+   filter: None
+   other: {"date_property_id": "YuY=", "view_range": "month"}
+
+## [Contacts] 'Contacts'  type=gallery  db=21a91b07-11ac-8097-a556-e719060d352c
+   filter: None
+   sorts: [('Ew~q', 'ascending'), ('rl^l', 'ascending')]
+   cover: {'type': 'page_cover'}
+   visible: [None, None, None, None, None]
+   other: {"cover_size": "small", "cover_aspect": "cover"}
+
+## [Contacts] 'Contacts'  type=table  db=31a91b07-11ac-801f-a4ab-ec043bc3172f
+   filter: None
+   sorts: [('NBry', 'descending')]
+   wrap_cells: False
+   visible: ['Name', 'Lead Source', 'Created time', 'Country', 'Deals', 'First Contacted', 'First Name', 'Job Title', 'Last Contacted', 'Last Enriched', 'Last Name', 'Latest Email', 'Latest Meeting', 'Linkedin', 'Location', 'Mailing List', 'Meeting Notes', 'Note', 'Owner', 'Primary Email', 'Primary Phone', 'Related Company', 'Secondary Email', None, '⚖️ Signed Legal Agreements', '📥 Emails', 'Duplicate of', 'Unsubscribed on', 'Comment Access']
+   other: {"subtasks": {"filter_scope": "parents_and_subitems"}, "frozen_column_index": -2}
+
+## [Contacts] 'Contacts Created'  type=chart  db=31a91b07-11ac-801f-a4ab-ec043bc3172f
+   filter: None
+   other: {"chart_type": "column", "x_axis": {"type": "created_time", "property_id": "NBry", "group_by": "relative", "sort": {"type": "ascending"}, "property_name": "Created time"}, "y_axis": {"aggregator": "count"}, "stack_by": {"type": "select", "property_id": "owKq", "sort": {"type": "ascending"}, "property_name": "Lead Source"}, "sort": "x_ascending", "hide_empty_groups": false, "group_style": "normal"}
+
+## [Contacts] 'Contacts by Owner'  type=chart  db=31a91b07-11ac-801f-a4ab-ec043bc3172f
+   filter: None
+   other: {"chart_type": "donut", "x_axis": {"type": "person", "property_id": ":ZRM", "sort": {"type": "manual"}, "property_name": "Owner", "hide_empty_groups": true}, "y_axis": {"aggregator": "count"}, "sort": "y_descending", "hide_empty_groups": false, "legend_position": "off", "donut_labels": "name"}
+
+## [Contacts] 'Contacts by Source'  type=chart  db=31a91b07-11ac-801f-a4ab-ec043bc3172f
+   filter: None
+   other: {"chart_type": "donut", "x_axis": {"type": "select", "property_id": "owKq", "sort": {"type": "manual"}, "property_name": "Lead Source", "hide_empty_groups": true}, "y_axis": {"aggregator": "count"}, "sort": "y_descending", "hide_empty_groups": false, "legend_position": "off", "donut_labels": "name"}
+
+## [Contacts] 'Deal Contacts'  type=gallery  db=21991b07-11ac-8180-81ad-f2d3c775b8b3
+   filter: None
+   sorts: [('H=@a', 'descending')]
+   cover: {'type': 'page_cover'}
+   visible: [None, None, None, None, None]
+   other: {"card_layout": "compact"}
+
+## [Contacts] 'Recently Added'  type=table  db=35e91b07-11ac-809a-9e12-fb8797b5a1dd
+   filter: None
+   sorts: [('NBry', 'descending')]
+   visible: ['Name', 'Related Company', 'Owner', 'Created time']
+   other: {"subtasks": {"filter_scope": "parents_and_subitems"}, "frozen_column_index": -1, "show_vertical_lines": false}
+
+## [Contacts] 'Recently Added'  type=gallery  db=21991b07-11ac-8180-81ad-f2d3c775b8b3
+   filter: None
+   sorts: [('NBry', 'descending')]
+   cover: {'type': 'page_cover'}
+   visible: [None, None]
+   other: {"card_layout": "compact"}
+
+## [Contacts] 'Recently Contacted'  type=gallery  db=21991b07-11ac-8180-81ad-f2d3c775b8b3
+   filter: None
+   sorts: [('H=@a', 'descending')]
+   cover: {'type': 'page_cover'}
+   visible: [None, None, None, None]
+   other: {"cover_size": "small", "cover_aspect": "cover", "card_layout": "compact"}
+
+## [Contacts] 'Recently Contacted'  type=gallery  db=35e91b07-11ac-809a-9e12-fb8797b5a1dd
+   filter: None
+   sorts: [('H=@a', 'descending')]
+   cover: {'type': 'page_cover'}
+   visible: [None, None, None, None]
+   other: {"cover_size": "small"}
+
+## [Contacts] 'Registration Count'  type=chart  db=38491b07-11ac-80f9-afdb-e89b3626ad14
+   filter: None
+   other: {"chart_type": "number", "value": {"aggregator": "count"}, "sort": "manual", "hide_empty_groups": false}
+
+## [Contacts] 'Registration List'  type=table  db=38491b07-11ac-80f9-afdb-e89b3626ad14
+   filter: None
+   sorts: [('Ew~q', 'ascending'), ('rl^l', 'ascending')]
+   wrap_cells: False
+   visible: ['Name', 'Related Company', 'Job Title', 'Linkedin', 'Primary Email']
+   other: {"subtasks": {"filter_scope": "parents_and_subitems", "toggle_column_id": "title"}, "frozen_column_index": -1, "show_vertical_lines": false}
+
+## [Deals] 'Deal Pipeline'  type=board  db=21a91b07-11ac-801d-b43e-d38566d1094b
+   filter: None
+   sorts: [('odqA', 'descending'), ('BmQi', 'ascending')]
+   group_by: {'type': 'status', 'group_by': 'option', 'sort': {'type': 'ascending'}, 'property_name': 'Status', 'hide_empty_groups': False}
+   visible: ['Deal Name', 'Value', 'Probability', 'Company', 'Contact', 'Type']
+   other: {"cover_size": "medium"}
+
+## [Deals] 'Deal Pipeline'  type=board  db=33b91b07-11ac-80fa-b209-cae764552ce6
+   filter: OR(odqA {'date': {'is_empty': True}})
+   group_by: {'type': 'status', 'group_by': 'option', 'sort': {'type': 'ascending'}, 'property_name': 'Status', 'hide_empty_groups': False}
+   visible: ['Deal Name', 'Owner', 'Probability', 'Value (SGD)']
+   other: {"card_layout": "compact"}
+
+## [Deals] 'Deal Pipeline - Recent'  type=board  db=2e491b07-11ac-809e-8293-d43fc9d646f6
+   filter: OR(odqA {'date': {'is_empty': True}})
+   sorts: [('odqA', 'descending'), ('BmQi', 'ascending')]
+   group_by: {'type': 'status', 'group_by': 'option', 'sort': {'type': 'ascending'}, 'property_name': 'Status', 'hide_empty_groups': False}
+   visible: ['Deal Name', 'Expected Close', 'Probability', 'Type', 'Company', 'Contact', 'Owner', 'Value']
+   other: {"card_layout": "compact"}
+
+## [Deals] 'Deal Value by Owner'  type=chart  db=33b91b07-11ac-80fa-b209-cae764552ce6
+   filter: None
+   other: {"chart_type": "donut", "x_axis": {"type": "person", "property_id": "SCxg", "sort": {"type": "manual"}, "property_name": "Owner", "hide_empty_groups": true}, "y_axis": {"aggregator": "sum", "property_id": "Bv]O"}, "sort": "y_descending", "hide_empty_groups": false, "legend_position": "off", "donut_labels": "name"}
+
+## [Deals] 'Deal Value by Stage'  type=chart  db=33b91b07-11ac-80fa-b209-cae764552ce6
+   filter: None
+   other: {"chart_type": "donut", "x_axis": {"type": "status", "property_id": "eog?", "group_by": "option", "sort": {"type": "ascending"}, "property_name": "Status", "hide_empty_groups": true}, "y_axis": {"aggregator": "sum", "property_id": "Bv]O"}, "sort": "y_descending", "hide_empty_groups": true, "legend_position": "off", "show_data_labels": true, "donut_labels": "name"}
+
+## [Deals] 'Deals'  type=board  db=31a91b07-11ac-801f-a4ab-ec043bc3172f
+   filter: None
+   group_by: {'type': 'status', 'group_by': 'option', 'sort': {'type': 'manual'}, 'property_name': 'Status', 'hide_empty_groups': False}
+   visible: ['Deal Name', 'Status', 'Type', 'Value (SGD)', 'Probability', 'Owner', 'Company', 'Contact']
+   other: {"card_layout": "compact"}
+
+## [Deals] 'Open Deals by Owner'  type=chart  db=33b91b07-11ac-80fa-b209-cae764552ce6
+   filter: None
+   other: {"chart_type": "bar", "x_axis": {"type": "person", "property_id": "SCxg", "sort": {"type": "manual"}, "property_name": "Owner", "hide_empty_groups": true}, "y_axis": {"aggregator": "count"}, "sort": "y_descending", "hide_empty_groups": false, "show_data_labels": true}
+
+## [Deals] 'Open Deals by Stage'  type=chart  db=33b91b07-11ac-80fa-b209-cae764552ce6
+   filter: None
+   other: {"chart_type": "bar", "x_axis": {"type": "status", "property_id": "eog?", "group_by": "option", "sort": {"type": "ascending"}, "property_name": "Status", "hide_empty_groups": true}, "y_axis": {"aggregator": "count"}, "sort": "x_ascending", "hide_empty_groups": true, "legend_position": "side", "show_data_labels": true, "group_style": "normal"}
+
+## [Emails] 'All Emails'  type=table  db=36691b07-11ac-802d-a613-ee1133487a75
+   filter: None
+   sorts: [('br~=', 'descending')]
+   wrap_cells: True
+   visible: ['Last edited', 'Subject', 'Contacts', 'Thread Summary', 'Companies', 'Deals', 'Comment Access']
+   other: {"subtasks": {"filter_scope": "parents_and_subitems", "toggle_column_id": "title"}, "frozen_column_index": -1}
+
+## [Emails] 'Emails'  type=table  db=35c91b07-11ac-80b9-aea9-e9c397996306
+   filter: None
+   sorts: [('wRuw', 'descending')]
+   visible: ['Subject', 'Date Received', 'Contacts']
+   other: {"subtasks": {"filter_scope": "parents_and_subitems", "toggle_column_id": "title"}, "frozen_column_index": -1, "show_vertical_lines": false}
+
+## [Emails] 'Emails'  type=table  db=24f91b07-11ac-8047-a467-d12f17f4340c
+   filter: None
+   sorts: [('wRuw', 'descending')]
+   wrap_cells: False
+   visible: ['Last edited', 'Subject', 'Contacts', 'Thread Summary']
+   other: {"subtasks": {"filter_scope": "parents_and_subitems", "toggle_column_id": "title"}, "frozen_column_index": -1, "show_vertical_lines": false}
+
+## [Emails] 'Emails'  type=table  db=21a91b07-11ac-80e6-a3a0-f5bbe6c801b1
+   filter: None
+   sorts: [('wRuw', 'descending')]
+   wrap_cells: True
+   visible: ['Date Received', 'Subject', 'Contacts', 'Thread Summary', 'Companies']
+   other: {"subtasks": {"filter_scope": "parents_and_subitems", "toggle_column_id": "title"}, "frozen_column_index": -1, "show_vertical_lines": false}
+
+## [Emails] 'Emails'  type=list  db=21a91b07-11ac-8097-a556-e719060d352c
+   filter: None
+   sorts: [('wRuw', 'descending')]
+   visible: [None, None, None]
+
+## [Emails] 'Emails DB'  type=table  db=39191b07-11ac-80c7-bfea-dc70bf273da8
+   filter: None
+   sorts: [('br~=', 'descending')]
+   wrap_cells: False
+   visible: ['Subject', 'Last edited']
+   other: {"subtasks": {"filter_scope": "parents_and_subitems"}, "frozen_column_index": 3}
+
+## [Emails] 'Inbox'  type=table  db=21b91b07-11ac-8098-a80a-e061d221efcd
+   filter: None
+   sorts: [('wRuw', 'descending')]
+   wrap_cells: False
+   visible: ['Subject', 'From', 'To', 'Cc', 'Date Received', 'Contacts', None, 'URL', 'Attachments']
+   other: {"frozen_column_index": -1}
+
+## [Emails] 'My Emails'  type=list  db=33c91b07-11ac-80d4-bf55-ef4f2191df97
+   filter: None
+   sorts: [('wRuw', 'descending')]
+   visible: [None, None, None]
+
+## [Emails] 'Recent Emails'  type=list  db=33c91b07-11ac-80d4-bf55-ef4f2191df97
+   filter: None
+   sorts: [('br~=', 'descending')]
+   visible: [None, None, None]
+
+## [MeetingNotes] 'All Meetings'  type=table  db=1984d37f-6b40-81e6-a46b-fe5fdd6e44d9
+   filter: None
+   sorts: [('re:E', 'descending')]
+   wrap_cells: False
+   visible: ['Title', 'Date', 'Type', 'Attendees', 'Contacts', 'Internal Attendees', 'Comment Access', 'Companies']
+   other: {"subtasks": {"filter_scope": "parents_and_subitems"}, "frozen_column_index": -1}
+
+## [MeetingNotes] 'Calendar'  type=calendar  db=21a91b07-11ac-8030-9b5e-e6040272a616
+   filter: None
+   visible: ['Title', 'Call Link', 'Type', 'Companies']
+   other: {"date_property_id": "bg}v", "date_property_name": "Date", "view_range": "week", "show_weekends": false}
+
+## [MeetingNotes] 'Meetings'  type=table  db=21a91b07-11ac-8097-a556-e719060d352c
+   filter: None
+   sorts: [('bg}v', 'descending')]
+   visible: ['Title', 'Date', 'Contacts', 'Internal Attendees']
+   other: {"subtasks": {"filter_scope": "parents_and_subitems", "toggle_column_id": "title"}, "frozen_column_index": -1, "show_vertical_lines": false}
+
+## [MeetingNotes] 'Meetings'  type=table  db=24f91b07-11ac-8047-a467-d12f17f4340c
+   filter: None
+   sorts: [('bg}v', 'descending')]
+   wrap_cells: False
+   visible: ['Title', 'Date', 'Contacts']
+   other: {"subtasks": {"filter_scope": "parents_and_subitems", "toggle_column_id": "title"}, "frozen_column_index": -1, "show_vertical_lines": false}
+
+## [MeetingNotes] 'Meetings'  type=table  db=20e91b07-11ac-806b-908b-db12771c38e2
+   filter: None
+   other: {"subtasks": {"display_mode": "disabled"}}
+
+## [MeetingNotes] 'Meetings'  type=table  db=35c91b07-11ac-80b9-aea9-e9c397996306
+   filter: None
+   visible: ['Title', 'Date', 'Contacts']
+   other: {"subtasks": {"filter_scope": "parents_and_subitems", "toggle_column_id": "title"}, "frozen_column_index": -1, "show_vertical_lines": false}
+
+## [MeetingNotes] 'Meetings'  type=table  db=21a91b07-11ac-80e6-a3a0-f5bbe6c801b1
+   filter: None
+   sorts: [('bg}v', 'descending')]
+   wrap_cells: True
+   visible: ['Title', 'Date', 'Contacts', 'Internal Attendees', 'Companies']
+   other: {"subtasks": {"filter_scope": "parents_and_subitems", "toggle_column_id": "title"}, "frozen_column_index": -1}
+
+## [MeetingNotes] 'My Meetings'  type=list  db=33b91b07-11ac-80d2-9932-f33018e2f894
+   filter: None
+   sorts: [('bg}v', 'descending')]
+   visible: [None, None]
+
+## [MeetingNotes] 'My Meetings'  type=calendar  db=393b8c38-162e-4c59-97b2-0e0daa2ec455
+   filter: None
+   sorts: [('bg}v', 'ascending')]
+   visible: ['Title', 'Companies']
+   other: {"date_property_id": "bg}v", "date_property_name": "Date", "view_range": "week", "show_weekends": false}
+
+## [MeetingNotes] 'My Meetings'  type=calendar  db=02409bf2-c3fb-43ef-a180-d7e79954a2d6
+   filter: None
+   sorts: [('bg}v', 'ascending')]
+   visible: ['Title', 'Companies']
+   other: {"date_property_id": "bg}v", "date_property_name": "Date", "view_range": "week", "show_weekends": false}
+
+## [MeetingNotes] 'My Meetings'  type=table  db=21a91b07-11ac-8030-9b5e-e6040272a616
+   filter: None
+   sorts: [('bg}v', 'descending')]
+   wrap_cells: False
+   visible: ['Title', 'Date', 'Type', 'Internal Attendees', 'Contacts', 'Comment Access']
+   other: {"subtasks": {"filter_scope": "parents_and_subitems"}, "frozen_column_index": -1}
+
+## [MeetingNotes] 'Today'  type=list  db=33b91b07-11ac-80d2-9932-f33018e2f894
+   filter: None
+   sorts: [('bg}v', 'ascending')]
+   visible: [None, None, None, None]
+
+## [MeetingNotes] 'Today'  type=list  db=21a91b07-11ac-8030-9b5e-e6040272a616
+   filter: None
+   sorts: [('bg}v', 'ascending')]
+   visible: [None, None, None, None]
+
+## [MeetingNotes] "Today's Meetings"  type=list  db=1984d37f-6b40-81e6-a46b-fe5fdd6e44d9
+   filter: None
+   sorts: [('bg}v', 'ascending')]
+   visible: [None, None, None, None]
+
+## [MeetingNotes] 'Weekly Calendar'  type=calendar  db=33b91b07-11ac-80d2-9932-f33018e2f894
+   filter: None
+   visible: ['Title', 'Call Link', 'Type', 'Contacts']
+   other: {"date_property_id": "bg}v", "date_property_name": "Date", "view_range": "week", "show_weekends": false}
+
+## [MeetingNotes] 'Weekly Calendar'  type=calendar  db=1984d37f-6b40-81e6-a46b-fe5fdd6e44d9
+   filter: None
+   visible: ['Title', 'Call Link', 'Type', None]
+   other: {"date_property_id": "bg}v", "date_property_name": "Date", "view_range": "week", "show_weekends": false}

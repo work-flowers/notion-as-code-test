@@ -11,7 +11,8 @@
  * itself ("knoxx-sandbox-space", bound via --spaceId), used purely as the
  * teamspace parent. Nothing references an existing Notion ID.
  *
- * Known adaptations from the source spec (see repo README for detail):
+ * Known adaptations from the source spec (detail in NOTES.md; numbered
+ * findings in ../../docs/FINDINGS.md):
  * - "Grant-Eligible Hours" rollup on Projects: Notion rollups cannot filter
  *   ("sum where Grant Eligible = Yes") and Notion as Code rollups cannot
  *   target formula properties. Instead, Activities carries an "Eligible Hours"

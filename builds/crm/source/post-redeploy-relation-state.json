@@ -1,0 +1,269 @@
+{
+  "note": "State after deploy #2 (re-run). Evidence for findings 18-19: dual-relation page values cleared by the re-run; one-way relation and non-relation values survived.",
+  "rows": {
+    "contacts-ds": [
+      {
+        "title": "G. Okonjo",
+        "relations": {
+          "Meeting Notes": 0,
+          "Deals": 0,
+          "Related Company": 0,
+          "\ud83d\udce5 Emails": 0,
+          "Duplicate of": 0,
+          "Duplicated by": 0,
+          "Deals Referred": 0
+        }
+      },
+      {
+        "title": "Grace Okonjo",
+        "relations": {
+          "Meeting Notes": 0,
+          "Deals": 0,
+          "Related Company": 0,
+          "\ud83d\udce5 Emails": 0,
+          "Duplicate of": 0,
+          "Duplicated by": 0,
+          "Deals Referred": 0
+        }
+      },
+      {
+        "title": "Dev Shah",
+        "relations": {
+          "Meeting Notes": 0,
+          "Deals": 0,
+          "Related Company": 0,
+          "\ud83d\udce5 Emails": 0,
+          "Duplicate of": 0,
+          "Duplicated by": 0,
+          "Deals Referred": 0
+        }
+      },
+      {
+        "title": "Sam Beaulieu",
+        "relations": {
+          "Meeting Notes": 0,
+          "Deals": 0,
+          "Related Company": 0,
+          "\ud83d\udce5 Emails": 0,
+          "Duplicate of": 0,
+          "Duplicated by": 0,
+          "Deals Referred": 0
+        }
+      },
+      {
+        "title": "Alice Nkemdirim",
+        "relations": {
+          "Meeting Notes": 0,
+          "Deals": 0,
+          "Related Company": 0,
+          "\ud83d\udce5 Emails": 0,
+          "Duplicate of": 0,
+          "Duplicated by": 0,
+          "Deals Referred": 0
+        }
+      },
+      {
+        "title": "Tomas Weller",
+        "relations": {
+          "Meeting Notes": 0,
+          "Deals": 0,
+          "Related Company": 0,
+          "\ud83d\udce5 Emails": 0,
+          "Duplicate of": 0,
+          "Duplicated by": 0,
+          "Deals Referred": 0
+        }
+      },
+      {
+        "title": "Priya Raman",
+        "relations": {
+          "Meeting Notes": 0,
+          "Deals": 0,
+          "Related Company": 0,
+          "\ud83d\udce5 Emails": 0,
+          "Duplicate of": 0,
+          "Duplicated by": 0,
+          "Deals Referred": 0
+        }
+      }
+    ],
+    "companies-ds": [
+      {
+        "title": "Meridian Grain Co.",
+        "relations": {
+          "Emails": 0,
+          "Primary Billing Contact": 0,
+          "Deals": 1,
+          "Meeting Notes": 0,
+          "Contacts": 0
+        }
+      },
+      {
+        "title": "Bright Anvil Studios",
+        "relations": {
+          "Emails": 0,
+          "Primary Billing Contact": 0,
+          "Deals": 1,
+          "Meeting Notes": 0,
+          "Contacts": 0
+        }
+      },
+      {
+        "title": "Halcyon Health",
+        "relations": {
+          "Emails": 0,
+          "Primary Billing Contact": 0,
+          "Deals": 2,
+          "Meeting Notes": 0,
+          "Contacts": 0
+        }
+      },
+      {
+        "title": "Fernbrook Logistics",
+        "relations": {
+          "Emails": 0,
+          "Primary Billing Contact": 1,
+          "Deals": 1,
+          "Meeting Notes": 0,
+          "Contacts": 0
+        }
+      }
+    ],
+    "deals-ds": [
+      {
+        "title": "Halcyon Health \u2014 Legacy intranet migration",
+        "relations": {
+          "Referred by": 0,
+          "Emails": 0,
+          "Company": 0,
+          "Contact": 0,
+          "Meeting Notes": 0
+        }
+      },
+      {
+        "title": "Meridian Grain \u2014 Support retainer",
+        "relations": {
+          "Referred by": 0,
+          "Emails": 0,
+          "Company": 0,
+          "Contact": 0,
+          "Meeting Notes": 0
+        }
+      },
+      {
+        "title": "Bright Anvil \u2014 Notion workshop",
+        "relations": {
+          "Referred by": 0,
+          "Emails": 0,
+          "Company": 0,
+          "Contact": 0,
+          "Meeting Notes": 0
+        }
+      },
+      {
+        "title": "Halcyon Health \u2014 Notion rollout",
+        "relations": {
+          "Referred by": 0,
+          "Emails": 0,
+          "Company": 0,
+          "Contact": 0,
+          "Meeting Notes": 0
+        }
+      },
+      {
+        "title": "Fernbrook \u2014 Ops automation build",
+        "relations": {
+          "Referred by": 0,
+          "Emails": 0,
+          "Company": 0,
+          "Contact": 0,
+          "Meeting Notes": 0
+        }
+      }
+    ],
+    "meetings-ds": [
+      {
+        "title": "Fernbrook \u2014 proposal walkthrough",
+        "relations": {
+          "Contacts": 0,
+          "Deals": 0,
+          "Companies": 0
+        }
+      },
+      {
+        "title": "Meridian Grain \u2014 intro call",
+        "relations": {
+          "Contacts": 0,
+          "Deals": 0,
+          "Companies": 0
+        }
+      },
+      {
+        "title": "Bright Anvil \u2014 production pipeline workshop",
+        "relations": {
+          "Contacts": 0,
+          "Deals": 0,
+          "Companies": 0
+        }
+      },
+      {
+        "title": "Halcyon Health \u2014 rollout scoping",
+        "relations": {
+          "Contacts": 0,
+          "Deals": 0,
+          "Companies": 0
+        }
+      },
+      {
+        "title": "Fernbrook \u2014 ops discovery",
+        "relations": {
+          "Contacts": 0,
+          "Deals": 0,
+          "Companies": 0
+        }
+      }
+    ],
+    "emails-ds": [
+      {
+        "title": "Re: Support retainer \u2014 October budget",
+        "relations": {
+          "Companies": 0,
+          "Deals": 0,
+          "Contacts": 0
+        }
+      },
+      {
+        "title": "Workshop wrap-up + invoice",
+        "relations": {
+          "Companies": 0,
+          "Deals": 0,
+          "Contacts": 0
+        }
+      },
+      {
+        "title": "Intro \u2014 Halcyon Health rollout",
+        "relations": {
+          "Companies": 0,
+          "Deals": 0,
+          "Contacts": 0
+        }
+      },
+      {
+        "title": "Fernbrook ops automation \u2014 proposal v2",
+        "relations": {
+          "Companies": 0,
+          "Deals": 0,
+          "Contacts": 0
+        }
+      },
+      {
+        "title": "Re: Automating the Fernbrook booking queue",
+        "relations": {
+          "Companies": 0,
+          "Deals": 0,
+          "Contacts": 0
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,213 @@
+# Findings — Notion as Code alpha
+
+Feedback-tracker candidates, accumulated across builds. **Numbers are stable —
+append, never renumber** (they get cited in feedback to Notion). Findings 1–7
+come from the **knoxx-rnd** deploy (2026-07-24); 8–16 from modelling the live
+**crm** build as code.
+
+## Bugs and hard limits (1–6)
+
+1. **🐛 Cross-data-source formula references are mis-bound.** A Formulas 2.0
+   expression `prop("relation").map(current.prop("related-prop")).sum()` is
+   accepted, and both property IDs resolve — but the rewriter binds the inner
+   property token to the *current* data source's collection ID instead of the
+   related one, so the formula silently evaluates to 0. Verified via
+   `GET /v1/data_sources/{id}`: the rewritten expression carries the wrong
+   collection ID on the inner `block_property` token. (Same-data-source formula
+   references, e.g. Activities' `Eligible Hours`, work correctly.)
+2. **No conditional rollups** — "sum of Hours where Grant Eligible = Yes" can't
+   be expressed: rollups don't filter, and Notion as Code rollups can't target
+   formula properties (`RollupTargetPropertyType` excludes `formula`). Combined
+   with finding 1, a grant-hours-per-project number currently requires a manual
+   UI formula. Workaround shipped in knoxx-rnd: an `Eligible Hours` formula on
+   Activities + the filtered **ATO Activities** view.
+3. **Non-TTY runs silently cancel** — the first-run confirmation prompt returns
+   `""` when stdin isn't a TTY, so agent/CI runs abort. Workaround: always pass
+   `--sessionStateFilePath`, which is what `npm run build` does.
+4. **No relative-date view filters** — fixed `YYYY-MM-DD` only, so "Today's
+   Activities" / "Today's Meetings" can't be built as specced; both builds fall
+   back to date-sorted lists.
+5. **Person property values can't be set by script** — columns exist, seed rows
+   leave them empty. Teamspace membership also can't be configured.
+6. **Auto-increment ID prefixes are workspace-global** — `KIP`/`KIA`/`KIK`/`KIC`
+   (knoxx-rnd) and `CRMC`/`CRMD` (crm) must not collide with each other or with
+   any existing database in the workspace. Tracked in
+   [WORKSPACE.md](WORKSPACE.md) and enforced by `npm run check`.
+
+## Feature request (7)
+
+7. **✨ Permissions-as-code.** No intent exists for teamspace membership/roles,
+   database share levels, or locking (a `TeamspaceMember` type is declared in
+   `types.ts` but nothing accepts it — likely roadmap). Scripts can't prevent
+   UI-side schema edits, so every deploy target needs a manual permissioning
+   pass (see each build's NOTES.md). Declared schema + locked schema would make
+   one-way push safe by construction — the natural complement to there being no
+   pull or drift detection — and is what governance-heavy builds (e.g. an ATO
+   evidence system) actually need. Also erodes the "same script, many
+   workspaces" story until it exists.
+
+## Gaps found modelling a live production workspace (8–15)
+
+Expressing a real workspace as code surfaced a different class of gap — less
+"this is buggy", more "this whole surface isn't in the DSL yet". Of the CRM's 87
+views, roughly a third cannot be expressed at all.
+
+8. **No chart or dashboard view types.** `ViewType` is table | board | calendar
+   | list | gallery | feed | timeline. The CRM's 7 charts (Deal Value by
+   Stage/Owner, Open Deals by Stage/Owner, Contacts Created, Contacts by
+   Source/Owner) and its "Contact Dashboard" have no representation. Charts are
+   how the CRM is actually *read* — the largest single gap. Curiously `feed` is
+   creatable but not readable: `GET /v1/views/{id}` 400s with
+   `Unsupported view type: feed`.
+9. **No buttons, and no database automations at all.** The intent union is
+   exactly `space | teamspace | database | page | view | file_attachment |
+   custom_agent`; `automation`, `trigger`, `webhook` and `button` appear nowhere
+   in the DSL. Nor is there an out-of-band route: the public REST API has no
+   automation endpoint (every shape of `/v1/automations` returns 400
+   `invalid_request_url`) and data-source retrieve omits them, so automations
+   can't even be read back for comparison. A scripted build is therefore
+   structure-and-read-only by construction — the CRM's whole write path
+   (Register Lead, Create Xero Contact, Create Slack Channel, Create Google
+   Drive Folder, Enrich, Add to Mailing List, Create Harvest Project) plus every
+   database automation stays a manual post-deploy pass. Together with finding 7,
+   this is what stops one script from fully provisioning a client workspace.
+10. **No `place` property type** (Companies → Address) — degrades to text.
+11. **No number formats.** `number` takes no `format`, so `number_with_commas`
+    (Deal Value) and `percent` (Probability) are lost; a percent property has to
+    be hand-formatted after deploy.
+12. **View filters can't express `is_empty` / `is_not_empty`.** The CRM's
+    pipeline board means "open deals" as *Actual Close is empty*. Approximated
+    with three `status_is_not` filters — which also probes whether multiple
+    filters AND together (undocumented).
+13. **Rollups can't target `unique_id`** either (`RollupTargetPropertyType`
+    excludes it, as it does `formula` — finding 2), so Deals → Company ID is
+    unbuildable, as are Deals → Slack Channel / Google Drive Folder (formula
+    targets).
+14. **No tabs block** in page-content markdown, so the CRM hub's tabbed left
+    column (Quick Actions / Databases) becomes callouts + columns.
+15. **Date values are date-only.** `notion.date(start, end?)` compiles to a
+    Notion inline date mention carrying only `start_date` / `end_date` — no
+    `start_time`, no `time_zone` — so a calendar-synced database (meetings,
+    emails) loses its times. Passing an ISO datetime just puts a malformed
+    string into `start_date`.
+
+## Feature request (16)
+
+16. **✨ A pull / import path.** Reconstructing the CRM schema took ~90 API calls
+    (databases → data sources → views list → each view) and a lot of manual
+    transliteration into `types.ts` shapes; `tools/pull-schema.ts` in this repo
+    automates the extraction but not the script generation.
+    `notion-as-code pull <databaseId>` emitting a script would make the alpha
+    usable on existing workspaces, not just greenfield ones — and would let
+    scripts become the source of truth for builds that already exist, which is
+    every client build worth governing.
+
+## From the crm first deploy + re-deploy (17–19)
+
+Deployed 2026-07-25. Run #1 created all 48 intents; run #2 re-ran the same
+script with one schema change.
+
+17. **One filter per property per view, enforced server-side.** Three stacked
+    `status_is_not` filters on one view are rejected outright:
+    `validation_error: Duplicate filter for property "dl-status". Each property
+    can only have one filter per view.` So the finding-12 workaround for
+    "Actual Close is empty" doesn't exist either — an open-pipeline view cannot
+    be expressed at all. Useful side effect: **validation happens before any
+    resource is created**, so a rejected run is atomic — the session file and
+    workspace were untouched after the failure.
+18. **🐛 A re-deploy silently clears dual-relation values on existing pages.**
+    Run #2 was resource-idempotent — 63 mappings unchanged, no ID churn, 5 deal
+    rows not 10 — and preserved every title, select, number, date, multi_select,
+    formula, rollup config, unique_id and page content block. But **every
+    dual-relation value written by run #1 came back empty**: deals ↔ contacts,
+    deals ↔ meetings, deals ↔ emails, contacts ↔ companies, meetings/emails ↔
+    companies, all zeroed. Two things survived and point at the cause: the
+    **one-way** relation (Companies → Primary Billing Contact) kept its value,
+    and so did the one-sided links described in finding 19. So a re-run appears
+    to rewrite dual-relation page values as empty rather than leaving them
+    alone — which makes re-deploying a populated workspace destructive to
+    exactly the data that expresses the model. Evidence snapshot:
+    `builds/crm/source/post-redeploy-relation-state.json`.
+19. **🐛 A dual relation can land one-sided.** After the clean first deploy, the
+    script's `Deals → Company` value (written on the deal) was readable from the
+    **Companies** side (`Deals` populated, `No. Deals` = 1) but read empty from
+    the **Deals** side, silently emptying the `Company Name` and `Domain`
+    rollups that depend on it. Identically-shaped dual relations written on the
+    same rows in the same run (`Contact`, `Meeting Notes`, `Emails`) read
+    correctly from both sides, so it isn't the write itself. Dropping `limit: 1`
+    from the property did not fix it — though that retest ran through run #2 and
+    is confounded by finding 18, so `limit` is not cleanly ruled out.
+    Feels related to finding 1: a paired property bound to the wrong collection
+    would read exactly like this.
+
+Also confirmed on these runs:
+
+- **Multi-data-source databases work.** One `Core CRM Objects` database with
+  three data sources (Contacts / Companies / Deals) deployed as specced.
+- **Views-only linked databases work**, including several tabs per block:
+  `notion.database()` with `dataSources` omitted produced the hub's Emails
+  (2 tabs), Meetings (3), Deals (2) and Contacts (2) blocks.
+- **Self-referencing dual relations work** — Contacts → `Duplicate of` /
+  `Duplicated by` resolved to the same data source with correct pairing.
+- **Forward page references in relation values work** — Fernbrook's
+  `Primary Billing Contact` resolved to a contact page created later in the
+  script.
+- **Board `columns` group hiding is accepted but has no effect.** The three
+  hidden status groups came back as `groups: None` in the view configuration;
+  the board shows every column.
+- **Finding 1 reproduces on a second formula shape.** Contacts' `Latest
+  Meeting` / `Latest Email` use `map`/`filter`/`sort`/`last` rather than `sum`;
+  the deployed expressions reference only their own collection ID, and all rows
+  evaluate empty. Same-data-source formulas were all correct (Meeting `Status`
+  → Upcoming/Completed, Deal `Expected Value` = 33 600, Company Slack/Drive
+  URL builders).
+- **Auto-increment prefixes, status groups and rollups otherwise work**:
+  `CRMC-1`, `CRMD-1…5`, the full Lead → Closed status set with its three
+  groups, and the Meetings → `Company Names` rollup.
+- **`me` person filters are unverifiable via the API** — `GET /v1/views/{id}`
+  returns `filter: null` for the My Emails / My Meetings views (the finding
+  documented under "reading a build back out"), so whether they deployed
+  correctly can only be confirmed in the UI.
+
+## What works
+
+Everything else deployed faithfully on the knoxx-rnd first run: two-way
+relations, rollups (Total Hours = 18 on the seeded prawn project ✅),
+status/select options with colors, auto-increment IDs (KIP-1…), filtered +
+sorted views, calendar/timeline/board views, ephemeral views embedded as inline
+linked databases on a hub page, column layouts, callouts, and child-page
+placement.
+
+## Open questions
+
+- ~~Does a **re-deploy** with the session file update in place without
+  duplicating?~~ **Answered:** yes for resources, but it wipes dual-relation
+  values (finding 18).
+- Do **manually added UI properties** (e.g. the hand-fixed Grant-Eligible Hours
+  formula) survive a re-deploy?
+- Does **removing a property from the script** leave the live property alone?
+- ~~Do **multiple view filters AND together**?~~ **Answered:** no — one filter
+  per property per view (finding 17).
+- ~~Does the finding-1 formula bug also hit `map`/`sort`/`last` expressions?~~
+  **Answered:** yes, identically (crm's Latest Meeting / Latest Email).
+- Is finding 19 (one-sided dual relation) caused by `limit: 1`, or by the same
+  mis-binding as finding 1? Needs a clean isolated run.
+- Does a re-deploy also clear relation values that were set **by hand in the
+  UI**, or only ones the script wrote? (bears on whether finding 18 makes
+  re-deploys unusable on live client workspaces)
+
+## Reading an existing build back out of Notion
+
+The public API covers schema *and* views, though views are undocumented in the
+SDK. `npm run pull -- --database=<id> --out=builds/<name>/source` wraps this:
+
+```bash
+curl -s "https://api.notion.com/v1/databases/$DB_ID"            -H "Authorization: Bearer $NOTION_TOKEN" -H "Notion-Version: 2026-03-11"
+curl -s "https://api.notion.com/v1/data_sources/$DS_ID"         -H "Authorization: Bearer $NOTION_TOKEN" -H "Notion-Version: 2026-03-11"
+curl -s "https://api.notion.com/v1/views?data_source_id=$DS_ID" -H "Authorization: Bearer $NOTION_TOKEN" -H "Notion-Version: 2026-03-11"
+curl -s "https://api.notion.com/v1/views/$VIEW_ID"              -H "Authorization: Bearer $NOTION_TOKEN" -H "Notion-Version: 2026-03-11"
+```
+
+Caveats: `GET /v1/views/{id}` 400s on feed views (35 of the CRM's 87), and
+retrieved filters come back `null` wherever the filter uses a relative date or
+the `me` variable — so "Today" / "My Meetings" views read as unfiltered.

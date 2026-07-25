@@ -1,0 +1,438 @@
+{
+  "resourceIdToPointerMappings": {
+    "crm-sandbox-space": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "space",
+      "id": "9607e18f-5d82-4842-8b96-ca0d32e66011"
+    },
+    "meetings-ds": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "collection",
+      "id": "3a891b07-11ac-8155-a501-000b7becaf4e"
+    },
+    "companies-ds": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "collection",
+      "id": "3a891b07-11ac-812c-a142-000b742c1b95"
+    },
+    "ct-priya": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a891b07-11ac-81f3-bf34-e086e9649888"
+    },
+    "crm-hub-page": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a891b07-11ac-8100-8c08-f898ab8f39cf"
+    },
+    "meetings-linked": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a891b07-11ac-81b4-8d43-d1644e22ceca"
+    },
+    "co-meridian": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a891b07-11ac-81ed-b2f4-fca215ca92ba"
+    },
+    "deals-won-view": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "collection_view",
+      "id": "3a891b07-11ac-81a7-93fd-000c6057d164"
+    },
+    "co-fernbrook": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a891b07-11ac-8132-96bd-ff5ceb9b0f72"
+    },
+    "mt-fernbrook-discovery": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a891b07-11ac-811f-bfc7-cc0ce6f06463"
+    },
+    "core-db": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a891b07-11ac-816d-aa8e-cc6e1c558f99"
+    },
+    "mt-meridian-intro": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a891b07-11ac-81bb-8a12-e1fc35f8a85b"
+    },
+    "meetings-today-view": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "collection_view",
+      "id": "3a891b07-11ac-81b0-a25c-000cea3aebbb"
+    },
+    "co-brightanvil": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a891b07-11ac-8129-bed6-eb7b5d87b66a"
+    },
+    "dl-brightanvil-workshop": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a891b07-11ac-810c-a795-e53ffd45b579"
+    },
+    "contacts-linked": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a891b07-11ac-8138-ba47-c488a95d04a1"
+    },
+    "em-fernbrook-proposal": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a891b07-11ac-81de-8caf-d73d4b56d447"
+    },
+    "dl-halcyon-migration": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a891b07-11ac-8157-aefc-c5f5fb939a3e"
+    },
+    "meetings-all-view": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "collection_view",
+      "id": "3a891b07-11ac-817e-b15c-000c305584da"
+    },
+    "deals-close-timeline-view": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "collection_view",
+      "id": "3a891b07-11ac-819c-933d-000c3d08c3f1"
+    },
+    "emails-recent-view": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "collection_view",
+      "id": "3a891b07-11ac-81b8-9501-000c3f44b5d9"
+    },
+    "meetings-mine-view": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "collection_view",
+      "id": "3a891b07-11ac-81fc-a82c-000c5b113946"
+    },
+    "ct-alice": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a891b07-11ac-8125-9716-d9039ee01dff"
+    },
+    "em-brightanvil-invoice": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a891b07-11ac-81dc-af8c-da831ea8b2ea"
+    },
+    "emails-mine-view": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "collection_view",
+      "id": "3a891b07-11ac-8187-88f0-000c5a4bb369"
+    },
+    "deals-linked": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a891b07-11ac-8153-a88f-db248efad6bd"
+    },
+    "crm-model-page": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a891b07-11ac-81c8-b819-c240d7317cff"
+    },
+    "dl-fernbrook-ops": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a891b07-11ac-8134-afb8-eaec28207314"
+    },
+    "em-fernbrook-intro": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a891b07-11ac-81a9-846d-e4dd215976eb"
+    },
+    "emails-linked": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a891b07-11ac-81dd-beae-fce7ee59cc80"
+    },
+    "crm-teamspace": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "team",
+      "id": "3a891b07-11ac-8199-9282-0042fd697f27"
+    },
+    "contacts-ds": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "collection",
+      "id": "3a891b07-11ac-8101-8809-000b7fdbf7c4"
+    },
+    "emails-ds": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "collection",
+      "id": "3a891b07-11ac-81a8-a0c8-000b47b763ae"
+    },
+    "meetings-db": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a891b07-11ac-81b0-a276-da5a7c261e53"
+    },
+    "meetings-by-type-view": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "collection_view",
+      "id": "3a891b07-11ac-81a7-a389-000ce2c07269"
+    },
+    "mt-brightanvil-workshop": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a891b07-11ac-8101-9cc6-cd4c50ae7bbd"
+    },
+    "emails-db": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a891b07-11ac-81a9-8880-f423c017f613"
+    },
+    "emails-inbox-view": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "collection_view",
+      "id": "3a891b07-11ac-81c6-9fdb-000cde73c494"
+    },
+    "meetings-hub-today-view": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "collection_view",
+      "id": "3a891b07-11ac-815f-bb44-000cfa54f797"
+    },
+    "ct-grace": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a891b07-11ac-8140-b32b-fea5c7f78d76"
+    },
+    "deals-pipeline-view": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "collection_view",
+      "id": "3a891b07-11ac-8117-a488-000c805ad774"
+    },
+    "co-halcyon": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a891b07-11ac-817e-80fb-d04d07e7af6b"
+    },
+    "ct-dev": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a891b07-11ac-8153-9185-eae57fe88118"
+    },
+    "ct-grace-dupe": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a891b07-11ac-81eb-8e99-e9698ef490e5"
+    },
+    "companies-table-view": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "collection_view",
+      "id": "3a891b07-11ac-8140-8707-000ca56445ca"
+    },
+    "deals-open-view": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "collection_view",
+      "id": "3a891b07-11ac-81f9-a059-000ceee12b27"
+    },
+    "contacts-recent-view": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "collection_view",
+      "id": "3a891b07-11ac-817f-bd57-000c310713a5"
+    },
+    "crm-hygiene-page": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a891b07-11ac-81ab-9246-ff9f28dac82c"
+    },
+    "ct-tomas": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a891b07-11ac-81d5-b785-ff5e6584d886"
+    },
+    "deals-ds": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "collection",
+      "id": "3a891b07-11ac-81b2-b166-000b533c21b3"
+    },
+    "contacts-recently-contacted-view": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "collection_view",
+      "id": "3a891b07-11ac-81c9-bb4c-000ccfcb288a"
+    },
+    "mt-fernbrook-proposal": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a891b07-11ac-8149-a581-d76b3b1a037f"
+    },
+    "deals-board-view": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "collection_view",
+      "id": "3a891b07-11ac-81ca-a3d4-000c16432b93"
+    },
+    "contacts-table-view": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "collection_view",
+      "id": "3a891b07-11ac-81a2-b02f-000cf539fe58"
+    },
+    "ct-sam": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a891b07-11ac-8181-ac2c-d8f38abebf83"
+    },
+    "em-halcyon-intro": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a891b07-11ac-81ea-a339-fa840475703f"
+    },
+    "em-meridian-followup": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a891b07-11ac-819a-97bd-c909df55416c"
+    },
+    "meetings-hub-calendar-view": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "collection_view",
+      "id": "3a891b07-11ac-81cd-8a44-000c416e8c74"
+    },
+    "dl-meridian-support": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a891b07-11ac-816e-a0fb-e6e62366cfe4"
+    },
+    "meetings-calendar-view": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "collection_view",
+      "id": "3a891b07-11ac-8160-84fb-000c3aa12a0f"
+    },
+    "emails-all-view": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "collection_view",
+      "id": "3a891b07-11ac-819f-a86b-000cb04d57ed"
+    },
+    "dl-halcyon-rollout": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a891b07-11ac-8156-b3ab-c09fcdbbedcc"
+    },
+    "mt-halcyon-scoping": {
+      "spaceId": "9607e18f-5d82-4842-8b96-ca0d32e66011",
+      "table": "block",
+      "id": "3a891b07-11ac-81e0-83bb-c3481841ee00"
+    }
+  },
+  "resourceIdToPropertyIdMappings": {
+    "em-to": "L>?a",
+    "co-harvest-client-id": "haep",
+    "em-comment-access": "IN\\z",
+    "em-contacts-rel": "cHaw",
+    "mt-type": "iKV|",
+    "ct-emails-rel": "RiQP",
+    "ct-company-rel": "QG;m",
+    "co-linear-team-id": "Zuhq",
+    "dl-owner": "oX=u",
+    "mt-deals-rel": "[>dr",
+    "ct-first-contacted": "\\`Aw",
+    "co-description": "w=mq",
+    "mt-title": "title",
+    "dl-contact-rel": "Zs^h",
+    "em-gmail-thread-id": "hVgh",
+    "ct-linkedin": "\\GGM",
+    "ct-country": "^\\X<",
+    "dl-id": "NL=k",
+    "co-deal-owner": "xg\\E",
+    "ct-deals-rel": "MuEj",
+    "ct-created-by": "Y`:~",
+    "mt-add-context": "thd_",
+    "em-created-time": "AHB<",
+    "dl-company-rel": "TIK~",
+    "dl-created-time": "irBN",
+    "mt-internal-attendees": "}OsZ",
+    "dl-probability": ":}qg",
+    "em-companies-rel": "BS[[",
+    "co-drive-folder": "WM=H",
+    "ct-primary-email": "[imk",
+    "dl-name": "title",
+    "ct-job-title": "@uO<",
+    "em-date-received": "QOBC",
+    "em-subject": "title",
+    "co-emails-rel": "C\\_\\",
+    "ct-subscribed-on": "tqtB",
+    "mt-created-by": "uhRi",
+    "mt-attendees": "EqI>",
+    "ct-mailing-list": "GW@X",
+    "ct-first-name": "^nST",
+    "co-billing-contact-rel": "fJlg",
+    "mt-created-time": "N_i{",
+    "em-internal-recipients": "MLZR",
+    "dl-value": "@x@~",
+    "ct-dup-of-rel": "^ye@",
+    "em-cc": "N~VF",
+    "ct-note": "]Zlb",
+    "ct-created-time": "C{Je",
+    "co-name": "title",
+    "co-last-edited-time": "w?m^",
+    "mt-call-link": "jIRV",
+    "mt-company-names": "K;Rn",
+    "dl-description": "<=Qt",
+    "dl-emails-rel": "RQYs",
+    "ct-meetings-rel": ">PFV",
+    "em-attachments": "Gb{w",
+    "co-linear-customer-id": "?wZC",
+    "ct-deals-referred-rel": "{JLU",
+    "co-deals-rel": "hI{f",
+    "dl-expected-close": "c::O",
+    "ct-last-name": "?OOy",
+    "em-thread-summary": "@@QM",
+    "em-last-edited": "?Pfr",
+    "ct-unsubscribed-on": "CTI}",
+    "co-country": "F[P~",
+    "dl-contact-email": "Mnek",
+    "em-deals-rel": "KdAd",
+    "dl-domain": "eAJN",
+    "ct-comment-access": "Qffe",
+    "co-drive-folder-id": "D:Bx",
+    "dl-meetings-rel": "wG^~",
+    "mt-companies-rel": "g{;Q",
+    "co-website": "SlH<",
+    "mt-contacts-rel": "ZbGn",
+    "ct-location": "kc<c",
+    "dl-actual-close": ">mif",
+    "ct-company-rollup": "@tcW",
+    "mt-gcal-event-id": "@SGp",
+    "mt-summary": "b:@~",
+    "dl-referred-by-rel": "P|rt",
+    "em-url": "QIC|",
+    "mt-status": "X`mx",
+    "co-address": "Sa[c",
+    "co-xero-contact-id": "Rf^^",
+    "dl-lost-reason": "mdJ@",
+    "dl-type": ">W~e",
+    "mt-date": "`:st",
+    "mt-granola-link": "`Yp?",
+    "co-id": "yry_",
+    "co-slack-channel": "vt;X",
+    "ct-bio": "HsCA",
+    "ct-dup-by-rel": "s`sy",
+    "em-gmail-message-id": "}hfR",
+    "dl-company-name": "JCXK",
+    "ct-name": "title",
+    "em-from": "vtDC",
+    "co-contacts-rel": "ypm{",
+    "ct-owner": "Nw}K",
+    "ct-latest-meeting": "}Zu>",
+    "dl-status": "lA[;",
+    "co-no-deals": "WVMo",
+    "co-no-contacts": "iMvt",
+    "co-size": "tgNw",
+    "co-created-time": "kewv",
+    "ct-city": "kU@@",
+    "mt-comment-access": "YQ;R",
+    "co-slack-channel-id": "YnSt",
+    "ct-last-enriched": "an\\\\",
+    "mt-description": "z|p~",
+    "ct-lead-source": "ZfXc",
+    "ct-secondary-email": "Yox_",
+    "ct-domain-rollup": "Xy>U",
+    "co-meetings-rel": "oRlI",
+    "ct-primary-phone": "Pg{[",
+    "ct-latest-email": "<Q;s",
+    "co-industry": "B~xl",
+    "dl-expected-value": "O;Q{"
+  }
+}
