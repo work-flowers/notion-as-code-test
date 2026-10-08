@@ -40,14 +40,25 @@ not `ntn notion-as-code apply`. Don't port template conventions (`src/main.ts`,
   Notion page, database or data source ID.
 - Claim auto-increment ID prefixes in `build.json` (`autoIncrementPrefixes`).
   They are workspace-global.
-- Page `content` uses Notion-flavoured Markdown. Mention another resource
-  from this script by its `resourceId` in double braces, e.g.
+- Page `content` uses Notion-flavoured Markdown. The full spec is
+  `INFRA_AS_CODE_MARKDOWN_SPEC` in the DSL types (below). Mention another
+  resource from this script by its `resourceId` in double braces, e.g.
   `<mention-database url="{{core-db}}">Core CRM Objects</mention-database>`.
   External URLs are ordinary Markdown links.
+- `<page url="{{id}}">` and `<database url="{{id}}">` place an in-script child
+  page or database at that spot in the content. They are not mentions: removing
+  one removes that child from the page. Use `<mention-page>` for a reference.
+- Give every teamspace, page, database and agent an `icon` through the `icon`
+  property, never as emoji in its name or title.
+- End every build script with `export {}`.
 - The DSL's types live in
   `notion-sdk-js/src/EXPERIMENTAL__notion-as-code/utils/types.ts`. Treat them
-  as the reference for property, view and filter shapes, and don't edit the SDK
-  checkout.
+  as the reference for property, view, filter and content shapes, and don't
+  edit the SDK checkout.
+- The SDK branch has its own guide at
+  `notion-sdk-js/src/EXPERIMENTAL__notion-as-code/AGENTS.md`. Its "Raw Script
+  Files" section applies to `builds/*/build.ts`. Its run commands, `scripts/`
+  and `sessions/` conventions don't: deploy through `npm run build` here.
 - Structure is code, data is UI. If a structural change was made in the
   Notion UI, back-port it into the script, or the next deploy overwrites it.
 
