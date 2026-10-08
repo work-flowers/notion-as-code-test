@@ -169,6 +169,21 @@ Also confirmed on these runs:
   documented under "reading a build back out"), so whether they deployed
   correctly can only be confirmed in the UI.
 
+## From the crm re-deploy of 2026-10-08 (20)
+
+20. **🐛 `<mention-database>` is now rejected server-side.** Re-deploying the
+    unchanged crm script failed with `internal_server_error: Unsupported tag
+    <mention-database> in Notion as Code. Replace it with a supported Markdown
+    tag.` The same three hub-page mentions deployed fine on 2026-07-25, and the
+    SDK branch (`notion-sdk-js` @ `3d33935`, 2026-07-23, which predates that
+    deploy) still lists `<mention-database>` as supported in
+    `INFRA_AS_CODE_MARKDOWN_SPEC`. So the server changed and the published spec
+    didn't. The rejection is atomic (as in finding 17): the session file was
+    untouched. Local `check` / `typecheck` can't catch it, since it's
+    server-side. Workaround shipped in crm and knoxx-rnd: plain bold database
+    names instead of mention chips. Untested: whether `<mention-page>`,
+    `<mention-data-source>` and `<mention-agent>` are rejected too.
+
 ## What works
 
 Everything else deployed faithfully on the knoxx-rnd first run: two-way
@@ -195,6 +210,9 @@ placement.
 - Does a re-deploy also clear relation values that were set **by hand in the
   UI**, or only ones the script wrote? (bears on whether finding 18 makes
   re-deploys unusable on live client workspaces)
+- Is finding 20 limited to `<mention-database>`, or are the other mention
+  tags (`page`, `data-source`, `agent`) rejected too? Is the change
+  intentional, and will the spec be updated?
 
 ## Reading an existing build back out of Notion
 

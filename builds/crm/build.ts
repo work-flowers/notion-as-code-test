@@ -1021,9 +1021,9 @@ const hubPage = crmTeamspace.addPage({
 		<callout icon="🗄️" color="gray_bg">
 			**Databases**
 
-			- <mention-database url="{{core-db}}">Core CRM Objects</mention-database> — Contacts · Companies · Deals
-			- <mention-database url="{{meetings-db}}">Meeting Notes</mention-database>
-			- <mention-database url="{{emails-db}}">Emails</mention-database>
+			- **Core CRM Objects** — Contacts · Companies · Deals
+			- **Meeting Notes**
+			- **Emails**
 		</callout>
 	</column>
 	<column ratio="50">

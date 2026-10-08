@@ -606,10 +606,10 @@ const hubPage = rndTeamspace.addPage({
 
 # Databases
 
-- <mention-database url="{{projects-db}}">Projects</mention-database> — master list, one row per innovation project. Owned by the Innovation Office.
-- <mention-database url="{{activities-db}}">Activities</mention-database> — the daily diary and the backbone of the R&D Tax Incentive claim. The **ATO Activities** view is the hand-to-Frank, audit-ready record.
-- <mention-database url="{{knowledge-db}}">Knowledge</mention-database> — lessons learned, IP register.
-- <mention-database url="{{commercial-db}}">Commercial Opportunities</mention-database> — commercial side (KBG), feeds new projects.
+- **Projects** — master list, one row per innovation project. Owned by the Innovation Office.
+- **Activities** — the daily diary and the backbone of the R&D Tax Incentive claim. The **ATO Activities** view is the hand-to-Frank, audit-ready record.
+- **Knowledge** — lessons learned, IP register.
+- **Commercial Opportunities** — commercial side (KBG), feeds new projects.
 
 # Operating docs
 
