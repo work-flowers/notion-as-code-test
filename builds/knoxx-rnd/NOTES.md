@@ -24,6 +24,9 @@ Run it: `npm run build -- knoxx-rnd`
   and is expected to evaluate to 0 (finding 1). If it gets fixed by hand in the
   UI, **delete that property block from the script first**, or the next deploy
   overwrites the fix with the broken expression.
+- **Hub page database list** names the four databases in bold rather than as
+  `<mention-database>` chips, which the server now rejects (finding 20). Not
+  yet re-deployed with this change.
 
 ## Post-deploy manual steps (client runbook)
 

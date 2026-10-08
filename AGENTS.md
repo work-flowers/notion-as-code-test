@@ -41,10 +41,15 @@ not `ntn notion-as-code apply`. Don't port template conventions (`src/main.ts`,
 - Claim auto-increment ID prefixes in `build.json` (`autoIncrementPrefixes`).
   They are workspace-global.
 - Page `content` uses Notion-flavoured Markdown. The full spec is
-  `INFRA_AS_CODE_MARKDOWN_SPEC` in the DSL types (below). Mention another
-  resource from this script by its `resourceId` in double braces, e.g.
-  `<mention-database url="{{core-db}}">Core CRM Objects</mention-database>`.
+  `INFRA_AS_CODE_MARKDOWN_SPEC` in the DSL types (below), but the server can
+  lag or diverge from it. A mention refers to another resource from this
+  script by its `resourceId` in double braces, e.g.
+  `<mention-page url="{{getting-started}}">Getting started</mention-page>`.
   External URLs are ordinary Markdown links.
+- **Don't use `<mention-database>`.** The server rejects it, which fails the
+  whole deploy, although the spec still lists it (finding 20). Name the
+  database in plain text instead. The other mention tags are untested since
+  then.
 - `<page url="{{id}}">` and `<database url="{{id}}">` place an in-script child
   page or database at that spot in the content. They are not mentions: removing
   one removes that child from the page. Use `<mention-page>` for a reference.

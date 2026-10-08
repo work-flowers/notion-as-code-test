@@ -20,7 +20,8 @@ The full list lives in the header of [build.ts](build.ts), each item tied to a
 numbered finding in [FINDINGS.md](../../docs/FINDINGS.md). The short version:
 no charts or dashboards (8), no buttons or automations (9), no `place` type (10),
 no number formats (11), no `is_empty` filter (12), some rollups unbuildable
-(13), no tabs block (14), date-only date values (15), empty person values (5).
+(13), no tabs block (14), date-only date values (15), empty person values (5), no database mention chips
+on the hub page (20).
 
 ## Source of truth for the model
 
@@ -62,6 +63,11 @@ the same empty values. Restoring the links is a data-level fix (API page
 updates, or by hand in the UI), and any later re-deploy will clear them again
 until finding 18 is fixed. `source/post-redeploy-relation-state.json` records
 the wiped state as evidence.
+
+**Deploy #3 (2026-10-08)** re-ran the script with the hub page's three
+`<mention-database>` chips swapped for bold names, after the unchanged script
+was rejected (finding 20). Resource and property mappings came back identical
+(63 + 117); `session.json` only changed key order.
 
 ## Post-deploy manual steps
 
